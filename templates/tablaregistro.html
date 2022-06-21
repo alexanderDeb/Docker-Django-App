@@ -1,0 +1,55 @@
+{% load static %}
+<div class="card">
+    <div class="card-header text-center">
+        <h2>Registro</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col p-4">
+                <h1></h1>
+                <form action="/registros/" method="POST">{% csrf_token %}
+                    <div class="form-group p-2">
+                        <input type="number" id="Documento" name="txtDocumento" class="form-control"
+                            placeholder="Documento" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" placeholder="Nombre"
+                            minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <input type="text" id="txtCorreo" name="txtCorreo" class="form-control" placeholder="Correo"
+                            minlength="5" maxlength="30" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <button type="submit" class="btn btn-success ">GUARDAR</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col p-4">
+                <div class="table-responsive py-2">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Cedula</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th colspan="2">Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in personas %}
+                            <tr>
+                                <td>{{p.documento}}</td>
+                                <td>{{p.nombre}}</td>
+                                <td>{{p.correo}}</td>
+                                <td><a href="eliminarPersona/{{p.documento}}" class="btn btn-danger">Eliminar</a></td>
+                                <td><a href="edicionPersona/{{p.documento}}" class="btn btn-success text-light">Editar</a></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

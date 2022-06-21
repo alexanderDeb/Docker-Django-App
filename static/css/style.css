@@ -1,0 +1,18 @@
+:root{
+    --color-dark: #1b1b1b1b;
+    --color-light: #ffffff;
+    --color-gold: #c7b8a5;
+}
+
+/* body{
+    font-family:'montserrat', sans-serif;
+    font-weight: 200;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+} */
+
+.background{
+    background-image: linear-gradient(to top, #070b12, #37393e, #696b70, #9fa1a6, #d9dbe0);
+    height: 100%;
+}

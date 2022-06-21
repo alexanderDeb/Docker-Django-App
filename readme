@@ -42,7 +42,7 @@ sudo docker-compose run --rm emcali-django python manage.py migrate
 #CREAR SUPER USUARIO
 sudo docker-compose run --rm emcali-django python manage.py createsuperuser
 #CREAR APP
-sudo docker-compose run --rm emcali-django python manage.py startapp webservices
+sudo docker-compose run --rm emcali-django python manage.py startapp Home
 
 #EJECTUAR PRUEBAS DESDE EL ARCHIVO DE TESTS.PY PARA CADA APP
 sudo docker-compose run --rm emcali-django python manage.py test app/erp
