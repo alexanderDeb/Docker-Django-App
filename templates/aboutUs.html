@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Solar app</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "lib/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" %}">
 </head>
 
 <body>
@@ -15,20 +14,18 @@
 
     <div>
         <div class="container">
-            <div class="p-2 m-4 bg-dark text-white opacity-50">
-                <h1 class="text-center">Conoce sobre nosotros</h1>
-            </div>
             <div class="row p-4">
                 <div class="col p-4">
-                    <p class="text-break">En este apartado encontraremos la informacion sobre la empresa y toda su documentacion que soporte el producto a vender</p>
+                    <h1 class="m-2 p-2 fw-bold">Conoce sobre nosotros</h1>
+                    <p class="text-break fw-lighter">¿Quieres controlar tus paneles solares? Conoce Solar App. Con esta aplicación, puedes ver la producción de energía de tu panel solar en tiempo real, para asegurarte de que estás sacando el máximo partido a tu inversión. No sólo eso, sino que Solar App también ofrece consejos sobre cómo mejorar el rendimiento de su panel solar. Así que, tanto si eres un novato en la energía solar como si eres un profesional, esta aplicación es una valiosa herramienta para cualquiera que quiera sacar el máximo partido a sus paneles solares.</p>
+                </div>
+                <div class="col p-4">                  
+                    <img src="{% static "img/About_us_2.jpg" %}" class="card-img-top img-fluid" alt="...">
                 </div>
             </div>
         </div>
     </div>
 
     <footer>{% include './footer.html' %}</footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
 </body>
 </html>

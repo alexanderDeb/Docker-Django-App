@@ -2,6 +2,7 @@
     --color-dark: #1b1b1b1b;
     --color-light: #ffffff;
     --color-gold: #c7b8a5;
+    --bs-body-bg: #fff;
 }
 
 /* body{
@@ -16,3 +17,4 @@
     background-image: linear-gradient(to top, #070b12, #37393e, #696b70, #9fa1a6, #d9dbe0);
     height: 100%;
 }
+

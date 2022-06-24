@@ -1,9 +1,8 @@
-# from django.http import HttpResponse
-# from django.template import Template, context
 from pydoc import render_doc
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .models import Persona
+from django.contrib.auth.decorators import login_required
 
 
 class HelloView(TemplateView):
